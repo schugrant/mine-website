@@ -1,0 +1,1 @@
+<template><NavBar /><main><router-view /></main><Footer /></template><script setup>import NavBar from './components/NavBar.vue';import Footer from './components/Footer.vue';</script><style>main{min-height:calc(100vh - 380px)}</style>

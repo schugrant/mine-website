@@ -1,0 +1,1 @@
+<template><footer class="footer"><p>&copy; {{ new Date().getFullYear() }} Honria. All Rights Reserved.</p></footer></template><style scoped>.footer{background:#1a1a1a;color:white;text-align:center;padding:30px 5%;margin-top:40px}</style>
