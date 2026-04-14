@@ -23,7 +23,7 @@
       <!-- 左箭头 -->
       <button class="arrow left" @click="scrollLeft">&lt;</button>
     <div class="carousel" ref="carousel">
-      <div v-for="p in products" :key="p.id" class="card">
+      <div v-for="p in filteredProducts" :key="p.id" class="card">
         <img :src="p.image" :alt="p.name">
         <h3>{{ p.name }}</h3>
         <router-link :to="`/product/${p.id}`" class="btn-small">View Details</router-link>
@@ -51,6 +51,32 @@
 <script setup>
 import { products } from '../data/products';
 import { articles } from '../data/articles';
+import { ref, computed } from 'vue';
+
+// 假设你原本的 products 数据（8个产品）
+// （如果你的 products 是从接口/父组件获取的，只需保留 filteredProducts 逻辑即可）
+const products = ref([
+  { id: 1, name: '产品1', image: 'xxx1.jpg' },
+  { id: 2, name: '产品2', image: 'xxx2.jpg' },
+  { id: 3, name: '产品3', image: 'xxx3.jpg' },
+  { id: 4, name: '产品4', image: 'xxx4.jpg' },
+  { id: 5, name: '产品5', image: 'xxx5.jpg' },
+  { id: 6, name: '产品6', image: 'xxx6.jpg' },
+  { id: 7, name: '产品7', image: 'xxx7.jpg' },
+  { id: 8, name: '产品8', image: 'xxx8.jpg' },
+]);
+
+// ======================
+// 🔥 关键：定义要显示的产品ID列表（你自己指定）
+// 比如只想显示 ID 为 1、3、5、7 的产品，就改这个数组
+// ======================
+const showProductIds = [1, 2, 3, 4, 5, 6, 7];
+
+// 🔥 计算属性：过滤出只包含指定ID的产品
+const filteredProducts = computed(() => {
+  // 只返回 showProductIds 里包含的产品
+  return products.value.filter(p => showProductIds.includes(p.id));
+});
 // ======================
 // 🔥 修改 2：加轮播控制
 // ======================
