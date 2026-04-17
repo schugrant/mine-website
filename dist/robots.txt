@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://honria.com/sitemap.xml

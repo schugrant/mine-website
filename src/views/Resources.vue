@@ -1,6 +1,6 @@
 <template>
 <section class="container page">
-    <h1>Technical & RFQ</h1>
+    <h1>Technical & FAQ</h1>
     <div class="grid">
         <div v-for="a in articles" :key="a.id" class="card">
             <img :src="a.image">

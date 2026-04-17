@@ -21,7 +21,7 @@
         </div>
       </div>
 
-      <router-link to="/resources" class="nav-item">Technical & RFQ</router-link>
+      <router-link to="/resources" class="nav-item">Technical & FAQ</router-link>
       <router-link to="/about" class="nav-item">About us</router-link>
       <router-link to="/contact" class="nav-item">Contact</router-link>
     </div>

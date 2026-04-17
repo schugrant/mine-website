@@ -36,7 +36,7 @@
   
   <!-- 资源文章区域 -->
   <section class="blog-section container">
-    <h2 class="title" style="margin-bottom: 0;">Technical / RFQ</h2>
+    <h2 class="title" style="margin-bottom: 0;">Technical / FAQ</h2>
     <h3 style="margin-top: 0.5em; font-style: italic; font-weight: normal;text-align:center;">Supporting product selection, application understanding, and supply decisions.</h3>
     <div class="grid">
       <div v-for="a in articles" :key="a.id" class="blog-card">
